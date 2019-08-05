@@ -1,7 +1,6 @@
 # I-SURF_Quantization
 
-# packages in environment at C:\Users\hong\.conda\envs\isurf:
-#
+# packages in environment
 # Name                    Version                   Build  Channel
 graphviz                  2.38                 hfd603c8_2
 h5py                      2.9.0                    pypi_0    pypi

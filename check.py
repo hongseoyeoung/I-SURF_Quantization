@@ -24,7 +24,7 @@ def check_each_layer(model, mask_array, x):
 def check(model, quanti_layer, x):
     j = 0
     for i in quanti_layer:
-        checkfile = open('check_sens.txt', 'a')
+        checkfile = open('check_specific.txt', 'a')
         check_model = swap_layer(model, j, i)
         print("{}, {}complete".format(j, i))
         yhat = check_model.predict(x)

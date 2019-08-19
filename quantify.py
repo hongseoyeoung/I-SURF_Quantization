@@ -72,8 +72,8 @@ def quantify(model, *mask_nums):
 
         # serialize model to JSON
         model_json = model.to_json()
-        with open("model_{}.json".format(mask_nums[i]), "w") as json_file:
+        with open(dir_modified+"model.json", "w") as json_file:
             json_file.write(model_json)
         # serialize weights to HDF5
-        model.save_weights("model_{}.h5".format(mask_nums[i]))
+        model.save_weights(dir_modified+"model.h5")
         print("Saved model to disk")

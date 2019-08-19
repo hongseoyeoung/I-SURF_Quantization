@@ -22,19 +22,19 @@ git clone "https://github.com/hongseoyeoung/I-SURF_Quantization"
 ```
 pip install tensorflow
 ```
-2. if you want to install tensorflow-gpu
+if you want to install tensorflow-gpu
 ```
 pip install tensorflow-gpu
 ```
-3. install keras
+2. install keras
 ```
 pip install keras
 ```
-4. install pillow
+3. install pillow
 ```
 pip install pillow
 ```
-5. if you use an anaconda virtual environment
+if you use an anaconda virtual environment
 ```
 cuda install pillow
 ```

@@ -47,7 +47,6 @@ if you want to change CNN model, you can. but only keras model
 ```
 python prediction_check.py
 ```
-```
 coffee_mug (89.09%) cup (5.26%) coffeepot (2.26%)
-```
+
 

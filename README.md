@@ -49,4 +49,19 @@ python prediction_check.py
 ```
 coffee_mug (89.09%) cup (5.26%) coffeepot (2.26%)
 
+### create bitwise And model
+```
+python create_bitwise_model.py
+```
 
+### create float16 model
+```
+python create_float16_model.py
+```
+
+### create fix8 model
+```
+python create_fix8_model.py
+```
+
+ 

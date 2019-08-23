@@ -69,6 +69,17 @@ python create_fix8_model.py
 ```
 it makes fixed 8 bit weights file(.npy)
 
+### create pruning model
+```
+python create_pruning_model.py
+```
+it makes pruning model. 
+it's code is
+```
+pruning(model, 0.005)
+```
+second parameter is threshold. if the weight's absolute values is under the threshold, the weight is changed zero.
+
 ## Check accuracy models
 
 ### check bit-wise And

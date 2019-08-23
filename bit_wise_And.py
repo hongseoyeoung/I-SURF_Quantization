@@ -16,3 +16,6 @@ def bit_wise_And(num, mask):
     
     # return modified number
     return struct.unpack('!f', bytes(result))[0]
+
+
+    

@@ -111,3 +111,28 @@ def fix8_to_float32(x):
     tmp = struct.pack('I', (sign << 31) | (exponent << 23) | mentissa)
     f = struct.unpack('f', tmp)
     return f[0]
+
+def pruning(model, threshold):
+    # get model's weights
+    weights = model.get_weights()
+    # get model's name
+    model_name, layer_name = get_layer_name(model)
+
+    # make the directory
+    if not os.path.exists('./{}'.format(model_name)):
+        os.mkdir('./{}'.format(model_name))
+
+    if not os.path.exists('./{}/prun_{}'.format(model_name, threshold)):
+        os.mkdir('./{}/prun_{}'.format(model_name, threshold))
+
+    # pruning the weights
+    i = 0
+    for weight in weights:
+        weight_f = weight.flatten()
+        for j in range(len(weight_f)):
+            if abs(weight_f[j]) < threshold:
+                weight_f[j] = 0
+        np.save('./{}/prun_{}/{}'.format(model_name, threshold, layer_name[i]), weight_f)
+        i += 1
+
+        

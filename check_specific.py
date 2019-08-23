@@ -17,7 +17,14 @@ x = np.expand_dims(x, axis=0)
 x = preprocess_input(x)
 
 # check specific mask array
-quanti_array = ['fix8','fix8','fix8','fix8','fl16','fix8'
-                ,'fl16','fl16','fl16','fl16','fl16','fl16'
-                  ,'fl16','fl16','fl16','fl16','fl16','fl16','fl16']
+# quanti_array = ['fix8','fix8','fl16','fix8','fl16','fix8'
+#                 ,'fix8','fl16','fl16','fl16','fl16','fl16'
+#                   ,'fl16','fl16','fl16','fl16','fl16','fl16','fl16']
+# quanti_array = ['original']*19
+# quanti_array = ['fix8']*19
+quanti_array = ['prun_0.003']*19
+# quanti_array = ['bitwiseAnd_21','bitwiseAnd_16','bitwiseAnd_17','bitwiseAnd_22','bitwiseAnd_17','bitwiseAnd_22'
+#                 ,'bitwiseAnd_17','bitwiseAnd_22','bitwiseAnd_17','bitwiseAnd_17','bitwiseAnd_17','bitwiseAnd_21'
+#                   ,'bitwiseAnd_17','bitwiseAnd_17','bitwiseAnd_17','bitwiseAnd_17','bitwiseAnd_17','bitwiseAnd_17','bitwiseAnd_17']     
+#             
 check(model, quanti_array, x)

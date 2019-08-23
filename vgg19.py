@@ -15,6 +15,7 @@ from convert import *
 # # vgg19 model
 model = VGG19(weights='imagenet')
 
+print(model.summary())
 # transform image into input 
 img_path = 'mug.jpg'
 img = image.load_img(img_path, target_size=(224, 224))
@@ -62,11 +63,11 @@ print('%s (%.2f%%)' % (label[0][0][1], label[0][0][2]*100), '%s (%.2f%%)' % (lab
 # check_each_layer(model, mask_array, x)
 
 
-# check specific mask array
-quanti_array = ['fix8','fix8','fix8','fix8','fl16','fix8'
-                ,'fl16','fl16','fl16','fl16','fl16','fl16'
-                  ,'fl16','fl16','fl16','fl16','fl16','fl16','fl16']
-check(model, quanti_array, x)
+# # check specific mask array
+# quanti_array = ['fix8','fix8','fix8','fix8','fl16','fix8'
+#                 ,'fl16','fl16','fl16','fl16','fl16','fl16'
+#                   ,'fl16','fl16','fl16','fl16','fl16','fl16','fl16']
+# check(model, quanti_array, x)
 
 ''' convert to float 16bit'''
 # convert_fl32_to_fl16(model)
